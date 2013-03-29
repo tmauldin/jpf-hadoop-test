@@ -43,7 +43,7 @@
 	      conf.setMapperClass(Map.class);
 	      conf.setCombinerClass(Reduce.class);
 	      conf.setReducerClass(Reduce.class);
-	
+	 
 	      conf.setInputFormat(TextInputFormat.class);
 	      conf.setOutputFormat(TextOutputFormat.class);
 	
