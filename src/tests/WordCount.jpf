@@ -1,0 +1,3 @@
++classpath=${config_path}/bin
+target=WordCount
+target_args=In, Out

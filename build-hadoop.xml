@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<project name="jpf-hadoop-test" default="jar" basedir=".">
+
+  <!-- ========================== Properties ========================== -->
+
+  <property name="hadoop-core_jar" location="${HADOOP_HOME}/hadoop-core-${HADOOP_VERSION}.jar"/>
+  <property name="project-root" location="/home/parallels/projects/jpf-hadoop-test/"/>
+  <property name="build-main" location="${project-root}/build/main"/>
+  <property name="src-main" location="${project-root}/src/main"/>
+  <property name="build-jar" location="/home/parallels/projects/jpf-hadoop-test/build/WordCount.jar"/>
+
+	
+  <target name="clean">
+	<delete dir="${project-root}/Out" />
+  </target>
+	
+  <target name="compile" depends="clean" description="compile the source">
+	 <javac classpath="${HADOOP_HOME}/hadoop-core-${HADOOP_VERSION}.jar" 
+	    srcdir="${src-main}" destdir="${build-main}" includeantruntime="false"/>
+  </target>
+	
+  <target name="jar" depends="compile" description="compile the source">
+    <jar destfile="${build-jar}" basedir="${build-main}" />
+  </target>
+	
+</project>
