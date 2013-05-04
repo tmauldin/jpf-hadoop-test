@@ -1,3 +1,4 @@
 +classpath=${config_path}/bin
 target=WordCount
 target_args=In, Out
+-Djava.security.auth.login.config==${config_path}/bin/my_jaas.config

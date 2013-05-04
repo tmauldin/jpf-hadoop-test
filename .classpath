@@ -5,8 +5,6 @@
 	<classpathentry kind="src" output="build/classes" path="src/classes"/>
 	<classpathentry kind="src" output="build/examples" path="src/examples"/>
 	<classpathentry kind="src" output="build/tests" path="src/tests"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/jpf-core"/>
 	<classpathentry exported="true" kind="lib" path="lib/asm-3.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/aspectjrt-1.6.5.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/aspectjtools-1.6.5.jar"/>
@@ -27,10 +25,6 @@
 	<classpathentry exported="true" kind="lib" path="lib/commons-math-2.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/commons-net-1.4.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/core-3.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/hadoop-capacity-scheduler-1.0.4.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/hadoop-core-1.0.4.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/hadoop-fairscheduler-1.0.4.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/hadoop-thriftfs-1.0.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/hsqldb-1.8.0.10.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jackson-core-asl-1.8.8.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jackson-mapper-asl-1.8.8.jar"/>
@@ -43,9 +37,6 @@
 	<classpathentry exported="true" kind="lib" path="lib/jets3t-0.6.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jetty-6.1.26.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jetty-util-6.1.26.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/jpf-annotations.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/jpf-classes.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/jpf.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jsch-0.1.42.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/junit-4.5.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/kfs-0.2.2.jar"/>
@@ -59,5 +50,9 @@
 	<classpathentry exported="true" kind="lib" path="lib/slf4j-api-1.4.3.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/slf4j-log4j12-1.4.3.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/xmlenc-0.52.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/hadoop-1.0.4"/>
+	<classpathentry kind="lib" path="/hadoop-1.0.4/hadoop-1.0.4/hadoop-core-1.0.4.jar" sourcepath="/hadoop-1.0.4/hadoop-1.0.4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jpf-core"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
