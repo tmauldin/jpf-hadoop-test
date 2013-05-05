@@ -17,10 +17,10 @@ import javax.security.auth.kerberos.KerberosTicket;
 import javax.security.auth.login.LoginContext;
 import javax.security.auth.login.LoginException;
 
-//import mylogin.MyLoginCallbackHandler;
-
 import org.apache.hadoop.security.*;
 import org.apache.hadoop.security.UserGroupInformation.AuthenticationMethod;
+
+import mylogin.MyLoginCallbackHandler;
 
 public class Subject {
 
@@ -38,10 +38,15 @@ public class Subject {
 	public <T extends Principal> Set<Principal> getPrincipals(Class<T> c) {
 		T instance = null;		
 		try {
-			LoginContext lc = new LoginContext("MyLogin");
+
+			System.setProperty("java.security.auth.login.config", "=/home/parallels/projects/jpf-hadoop-test/bin/my_jaas.config"); 
+			LoginContext lc = new LoginContext("MyLogin", new MyLoginCallbackHandler());
 			Constructor ctor = c.getConstructor(String.class, AuthenticationMethod.class, LoginContext.class);
 		    ctor.setAccessible(true);
 	 	    instance = (T)ctor.newInstance("tmauldin", AuthenticationMethod.SIMPLE, lc);
+//			Constructor ctor = c.getConstructor(String.class);
+//			ctor.setAccessible(true);
+//			instance = (T)ctor.newInstance("tmauldin");
 		} catch (InstantiationException x) {
 		    x.printStackTrace();
 	 	} catch (InvocationTargetException x) {
@@ -53,6 +58,7 @@ public class Subject {
 		} catch (SecurityException e) {
 			e.printStackTrace();
 		} catch (LoginException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		
